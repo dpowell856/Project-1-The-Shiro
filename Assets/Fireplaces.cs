@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Fireplaces : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Fireplace[] _fireplaces;
+
     void Start()
     {
-        
+        _fireplaces = GetComponentsInChildren<Fireplace>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (IsAllActiveFireplacesLit())
+        {
+            StartNextWave();
+        }
+    }
+
+    private bool IsAllActiveFireplacesLit()
+    {
+        //loop through actiavted fireplaces and check if their all lit return true
+    }
+
+    private void SartNextWave()
+    {
+
     }
 }
