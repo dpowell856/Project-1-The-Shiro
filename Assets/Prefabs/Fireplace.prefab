@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6783183357085575335}
   - component: {fileID: 6783183357085575328}
   - component: {fileID: 6783183357085575329}
+  - component: {fileID: 6714448076229782909}
+  - component: {fileID: 7010394382959342566}
   m_Layer: 0
   m_Name: Fireplace
   m_TagString: Untagged
@@ -151,4 +153,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19e5b504d137db4bb7cf39024545186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _range: 0
   _player: {fileID: 0}
+--- !u!58 &6714448076229782909
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783183357085575330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997
+--- !u!58 &7010394382959342566
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783183357085575330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0963106

@@ -6,34 +6,34 @@ public class Arrow : MonoBehaviour {
 
     public float MaxLifeTime;
 
-	public Vector3 Velocity { get; set; }
+    [SerializeField] private Vector3 _velocity;
 
-	public Vector3 MaxSize;
+    [SerializeField] private Vector3 _maxSize;
 
-	private Vector3 InitialSize;
+	private Vector3 _initialSize;
 
-	private float ElapsedTimeAlive;
+	private float _elapsedTimeAlive;
 
     // Start is called before the first frame update
     void Start() {
         //Stores the initial size of an arrow as it is spawned
-		InitialSize = gameObject.transform.localScale;
-		ElapsedTimeAlive = 0.0f;
+		_initialSize = gameObject.transform.localScale;
+
     }
 
     // Fixed update is called once per fixed interval
     void FixedUpdate() {
         float dt = Time.fixedDeltaTime;
 
-		transform.position = transform.position + Velocity * dt;
+		transform.position = transform.position + _velocity * dt;
 
-		Vector3 Scale = InitialSize + MaxSize*Mathf.Sin(ElapsedTimeAlive/MaxLifeTime*Mathf.PI);
+		//Vector3 scale = InitialSize + MaxSize*Mathf.Sin(ElapsedTimeAlive/MaxLifeTime*Mathf.PI);
 
-		transform.localScale = Scale;
-		transform.position = transform.position + this.Velocity * dt;
-		ElapsedTimeAlive += dt;
+		//transform.localScale = scale;
+		transform.position += _velocity * dt;
+		_elapsedTimeAlive += dt;
 
-		if (ElapsedTimeAlive > MaxLifeTime) {
+		if (_elapsedTimeAlive > MaxLifeTime) {
 			Destroy (gameObject);
 		}
     }

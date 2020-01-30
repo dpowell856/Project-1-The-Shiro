@@ -6,19 +6,19 @@ public class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Player _player;
+    public Player player { get; private set; }
 
     private Vector2 _axisVector;
 
     void Start()
     {
-        _player = Players.GetPlayer(Player.ID.player0);
+        player = Players.GetPlayer(Player.ID.player0);
     }
 
     void Update()
     {
         // GetAction is a boolean that returns true when the button is down
-        if (_player.GetAction(Action.Shoot))
+        if (player.GetAction(Action.Shoot))
         {
             print("SHOOT BUTTON HAS BEEN PRESSED");
         }
@@ -33,7 +33,7 @@ public class Fighter : MonoBehaviour
 
     private void HandleMovementInput()
     {
-        _axisVector = new Vector2(_player.GetAxis(Axis.Horizontal), _player.GetAxis(Axis.Vertical));
+        _axisVector = new Vector2(player.GetAxis(Axis.Horizontal), player.GetAxis(Axis.Vertical));
     }
 
     private void HandleMovement()

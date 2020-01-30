@@ -4,52 +4,30 @@ using UnityEngine;
 
 public class Fireplace : MonoBehaviour
 {
-    private float _random;
-    private float _range = 2.0f;
-    private float _distance;
-    private bool _activated;
     private bool _lit = false;
 
-    private SpriteRenderer _sr;
-    private Vector2 _playerPosition;
-    private Vector2 _position;
-    [SerializeField] private GameObject _player;
+    private bool _active;
+
+    private SpriteRenderer _spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        _random = Random.Range(0.0f, 2.0f);
-        if (_random < 1.0f)
-        {
-            _activated = false;
-        } else
-        {
-            _activated = true;
-        }
-        _sr = this.GetComponent<SpriteRenderer>();
-        _position = this.transform.position;
+        float _random = Random.Range(0.0f, 2.0f);
+
+        _active = _random < 1.0f;
+
+        _spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (_activated == true)
+        if (collision.CompareTag("Player"))
         {
-            _sr.color = new Color(255, 230, 210);
-            _distance = Vector2.Distance(_player.transform.position, _position);
-            if(_distance < _range)
+            if (collision.GetComponent<Fighter>().player.GetAction(Action.Interact))
             {
-                _lit = true;
+                print("Player is inside torch usable zone");
             }
-        }
-        else if(_activated == false)
-        {
-            _sr.color = new Color(0, 0, 0);
-        }
-
-        if (_lit == true)
-        {
-            _sr.color = new Color(255, 0, 0);
         }
     }
 }
