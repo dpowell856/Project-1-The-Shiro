@@ -10,6 +10,8 @@ public class Fighter : MonoBehaviour
 
     private Vector2 _axisVector;
 
+    private bool _dash;
+
     void Start()
     {
         player = Players.GetPlayer(Player.ID.player0);
@@ -24,11 +26,17 @@ public class Fighter : MonoBehaviour
         }
 
         HandleMovementInput();
+        HandleDashInput();
     }
 
     void FixedUpdate()
     {
         HandleMovement();
+        if (_dash)
+        {
+            Dash();
+            _dash = false;
+        }
     }
 
     private void HandleMovementInput()
@@ -39,5 +47,15 @@ public class Fighter : MonoBehaviour
     private void HandleMovement()
     {
         transform.position += new Vector3(_axisVector.x, _axisVector.y) * _speed;
+    }
+
+    private void HandleDashInput()
+    {
+        // set _dash = true when theyve pressed it
+    }
+
+    private void Dash()
+    {
+
     }
 }
