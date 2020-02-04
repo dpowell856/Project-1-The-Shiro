@@ -6,6 +6,8 @@ public class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
+    [SerializeField] private Player.ID _tempPlayerID;
+
     public Player player { get; private set; }
 
     private Vector2 _axisVector;
@@ -14,7 +16,7 @@ public class Fighter : MonoBehaviour
 
     void Start()
     {
-        player = Players.GetPlayer(Player.ID.player0);
+        player = Players.GetPlayer(_tempPlayerID);
     }
 
     void Update()
