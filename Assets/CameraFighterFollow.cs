@@ -71,7 +71,7 @@ public class CameraFighterFollow : MonoBehaviour
         }
     }
 
-    private Bounds CalculateFighterBounds()
+    private void CalculateFighterBounds()
     {
         Bounds bounds = new Bounds(_fighters[0].position, Vector3.zero);
 
@@ -80,7 +80,7 @@ public class CameraFighterFollow : MonoBehaviour
             bounds.Encapsulate(trans.position);
         }
 
-        return bounds;
+        _fighterBounds = bounds;
     }
 }
 
