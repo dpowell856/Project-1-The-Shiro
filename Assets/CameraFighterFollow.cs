@@ -45,7 +45,7 @@ public class CameraFighterFollow : MonoBehaviour
 
     private void Move()
     {
-        Vector3 targetPosition = _fighterBounds.size;
+        Vector3 targetPosition = _fighterBounds.center;
         targetPosition.z = transform.position.z;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _cameraMoveVelocity, _followTime);
     }
