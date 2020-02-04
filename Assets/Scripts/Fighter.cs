@@ -27,8 +27,13 @@ public class Fighter : MonoBehaviour
             print("SHOOT BUTTON HAS BEEN PRESSED");
         }
 
+        if (player.GetAction(Action.Dash))
+        {
+            print("PLAYER HAS DODGED");
+            HandleDashInput();
+        }
+
         HandleMovementInput();
-        HandleDashInput();
     }
 
     void FixedUpdate()
@@ -53,11 +58,11 @@ public class Fighter : MonoBehaviour
 
     private void HandleDashInput()
     {
-        // set _dash = true when theyve pressed it
+        _dash = true;
     }
 
     private void Dash()
     {
-
+        transform.position += new Vector3(_axisVector.x, _axisVector.y);
     }
 }
