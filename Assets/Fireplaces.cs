@@ -22,9 +22,10 @@ public class Fireplaces : MonoBehaviour
     private bool IsAllActiveFireplacesLit()
     {
         //loop through actiavted fireplaces and check if their all lit return true
+        return false;
     }
 
-    private void SartNextWave()
+    private void StartNextWave()
     {
 
     }
