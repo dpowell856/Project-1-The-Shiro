@@ -194,7 +194,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &922707425
+--- !u!21 &382408696
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 922707425}
+      objectReference: {fileID: 382408696}
     - target: {fileID: 6561502714241534485, guid: c90c9ee72a8336a4a8c54bf6938e9be5,
         type: 3}
       propertyPath: MaxSize.x
@@ -443,6 +443,11 @@ PrefabInstance:
     - target: {fileID: 6561502714241534485, guid: c90c9ee72a8336a4a8c54bf6938e9be5,
         type: 3}
       propertyPath: Velocity.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561502714241534485, guid: c90c9ee72a8336a4a8c54bf6938e9be5,
+        type: 3}
+      propertyPath: _velocity.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

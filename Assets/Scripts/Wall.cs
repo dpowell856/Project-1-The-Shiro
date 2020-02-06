@@ -42,9 +42,9 @@ public class Wall : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _life += _totalLife * (Time.fixedDeltaTime / _repairTime);
-            if(_life > 100)
+            if(_life > _totalLife)
             {
-                _life = 100;
+                _life = _totalLife;
             }
         }
     }
