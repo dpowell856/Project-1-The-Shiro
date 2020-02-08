@@ -19,7 +19,7 @@ public class Player {
 
     public Character _character { private set; get; }
 
-    public ID _playerID { private set; get; }
+    public ID playerID { private set; get; }
 
     public enum ID {
         player0 = 0,
