@@ -15,6 +15,9 @@ public class CharSelect : MonoBehaviour
     private int num = 1;
     private SpriteRenderer Char1Render, Char2Render, Char3Render;
     public TextMeshProUGUI Text1, Text2, Text3;
+   
+
+
 
 
     private void Awake()
@@ -24,8 +27,12 @@ public class CharSelect : MonoBehaviour
         Char1Render = Char1.GetComponent<SpriteRenderer>();
         Char2Render = Char1.GetComponent<SpriteRenderer>();
         Char3Render = Char1.GetComponent<SpriteRenderer>();
+
         
     }
+
+
+
     public void Update()
     {
         if (num == 1)
@@ -46,7 +53,7 @@ public class CharSelect : MonoBehaviour
             Text2.text = Char3.GetComponentInChildren<CharInfo>().Description;
             Text3.text = "Hp " + Char3.GetComponentInChildren<CharInfo>().Hp + "\nStr " + Char3.GetComponentInChildren<CharInfo>().Str + "\nDex " + Char3.GetComponentInChildren<CharInfo>().Dex + "\nInt " + Char3.GetComponentInChildren<CharInfo>().Int;
         }
-            
+
     }
 
 
