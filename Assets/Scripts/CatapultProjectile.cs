@@ -7,6 +7,7 @@ public class CatapultProjectile : Damageable
     // Start is called before the first frame update
     void Start() {
         
+        _health = _totalHealth;
     }
 
     // Fixed update is called once per fixed interval
