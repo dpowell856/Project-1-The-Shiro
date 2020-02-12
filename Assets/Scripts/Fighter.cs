@@ -13,6 +13,7 @@ public class Fighter : MonoBehaviour
     private Vector2 _axisVector;
 
     private bool _dash;
+    internal int position;
 
     void Start()
     {
