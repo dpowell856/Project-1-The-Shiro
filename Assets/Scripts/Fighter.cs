@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float bulletForce = 20f;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
     public Player player { get; private set; }
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
 
     private Vector2 _axisVector;
+
 
     private bool _dash;
     internal int position;
@@ -25,7 +30,7 @@ public class Fighter : MonoBehaviour
         // GetAction is a boolean that returns true when the button is down
         if (player.GetAction(Action.Shoot))
         {
-            print("SHOOT BUTTON HAS BEEN PRESSED");
+            Shoot();
         }
 
         if (player.GetAction(Action.Dash))
@@ -37,8 +42,10 @@ public class Fighter : MonoBehaviour
         HandleMovementInput();
     }
 
+    
     void FixedUpdate()
     {
+        faceMouse();
         HandleMovement();
         if (_dash)
         {
@@ -65,5 +72,20 @@ public class Fighter : MonoBehaviour
     private void Dash()
     {
         transform.position += new Vector3(_axisVector.x, _axisVector.y);
+    }
+
+    void faceMouse()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+        transform.up = direction;
+    }
+    private void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
 }
