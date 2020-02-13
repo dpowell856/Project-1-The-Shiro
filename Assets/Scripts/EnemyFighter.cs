@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyFighter : Damageable
 {
 
-    protected float _speed;
-    protected float _range;
+    [SerializeField] protected float _speed;
+    [SerializeField] protected float _range;
 
     // Update is called once per frame
     void Update()
@@ -20,15 +20,19 @@ public class EnemyFighter : Damageable
         move();
     }
 
-    
+
     void move()
     {
         Fighter closestPlayer = findPlayer();
         Vector3 direction = closestPlayer.transform.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;
-        transform.position += direction*0.01f;
-    }
+        if ( _range <= (closestPlayer.transform.position - this.transform.position).sqrMagnitude)
+        {
+            transform.position += direction * 0.01f;
+        }
+    }    
+
 
     Fighter findPlayer()
     {
@@ -46,8 +50,6 @@ public class EnemyFighter : Damageable
             }
         }
         Debug.DrawLine(this.transform.position, closestPlayer.transform.position);
-        return closestPlayer;
-        
+        return closestPlayer;     
     }
-
 }
