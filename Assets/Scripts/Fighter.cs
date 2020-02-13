@@ -6,7 +6,6 @@ using UnityEngine;
 public class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float bulletForce = 20f;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -36,7 +35,7 @@ public class Fighter : MonoBehaviour
         if (player.GetAction(Action.Dash))
         {
             print("PLAYER HAS DODGED");
-            HandleDashInput();
+            HandleNarutoInput();
         }
 
         HandleMovementInput();
@@ -64,7 +63,7 @@ public class Fighter : MonoBehaviour
         transform.position += new Vector3(_axisVector.x, _axisVector.y) * _speed;
     }
 
-    private void HandleDashInput()
+    private void HandleNarutoInput()
     {
         _dash = true;
     }
@@ -85,7 +84,5 @@ public class Fighter : MonoBehaviour
     private void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
 }

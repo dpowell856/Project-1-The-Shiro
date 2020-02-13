@@ -183,7 +183,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1656760376}
+      objectReference: {fileID: 1763145775}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
 --- !u!4 &65635006 stripped
@@ -263,10 +263,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1974840582}
+      objectReference: {fileID: 999137081}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
---- !u!21 &150919588
+--- !u!21 &134107879
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 377095625}
+      objectReference: {fileID: 523689345}
     - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -516,7 +516,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 403424279}
+      objectReference: {fileID: 1972271833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
 --- !u!4 &273926868 stripped
@@ -525,37 +525,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 476705037}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &330346220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 330346221}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &330346221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330346220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.249, y: 0.786, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1646950851}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &377095625
+--- !u!21 &282223470
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -564,92 +534,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shapes2D Material
   m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!21 &403424279
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -848,7 +733,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1600108761}
+      objectReference: {fileID: 1465274366}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
 --- !u!1001 &478248950
@@ -922,94 +807,9 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 962851714}
+      objectReference: {fileID: 1239488125}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
---- !u!21 &509811926
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &516852251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
@@ -1111,19 +911,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &690526290 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-    type: 3}
-  m_PrefabInstance: {fileID: 478248950}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &692755197 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-    type: 3}
-  m_PrefabInstance: {fileID: 3548168683425240873}
-  m_PrefabAsset: {fileID: 0}
---- !u!21 &692792782
+--- !u!21 &523689345
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1132,7 +920,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shapes2D Material
   m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1208,107 +996,92 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!1001 &761697916
-PrefabInstance:
+--- !u!21 &531019379
+Material:
+  serializedVersion: 6
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 880456498}
-    m_Modifications:
-    - target: {fileID: 3548168683848240597, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_Name
-      value: BottomWall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548168683848240598, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 1301015340}
-    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 27a327a83f7c39740b291beb0a83c294, type: 3}
---- !u!4 &848046424 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1985455365}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &873504067
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &563428670
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1393,6 +1166,137 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &690526290 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+    type: 3}
+  m_PrefabInstance: {fileID: 478248950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &692755197 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+    type: 3}
+  m_PrefabInstance: {fileID: 3548168683425240873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &705367131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3967438077089400686, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1960549109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &705367132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705367131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9b0a53fb63f9047af106eaae256d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 20
+--- !u!1001 &761697916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 880456498}
+    m_Modifications:
+    - target: {fileID: 3548168683848240597, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_Name
+      value: BottomWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240596, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548168683848240598, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1459924490}
+    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083655085964412602, guid: 27a327a83f7c39740b291beb0a83c294,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27a327a83f7c39740b291beb0a83c294, type: 3}
+--- !u!4 &848046424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1985455365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880456497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1331,177 @@ Transform:
   m_Father: {fileID: 2040573556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &962851714
+--- !u!21 &917525319
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &981381322
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &999137081
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1546,81 +1620,7 @@ Transform:
   m_Father: {fileID: 2040573556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1154722267
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 431723954}
-    m_Modifications:
-    - target: {fileID: 6783183357085575330, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_Name
-      value: Fireplace (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.03125
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6783183357085575328, guid: d74300d7f6746f24893f2149ec44a2da,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 150919588}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
---- !u!21 &1177665266
+--- !u!21 &1046859737
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1629,7 +1629,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shapes2D Material
   m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1705,6 +1705,165 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &1133186865
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1001 &1154722267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 431723954}
+    m_Modifications:
+    - target: {fileID: 6783183357085575330, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_Name
+      value: Fireplace (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783183357085575328, guid: d74300d7f6746f24893f2149ec44a2da,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 981381322}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
 --- !u!1 &1222356594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1913,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1655443260}
+  - {fileID: 282223470}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1847,13 +2006,7 @@ MonoBehaviour:
     _usePolygonMap: 0
   wasConverted: 0
   preConvertedScale: {x: 0, y: 0, z: 0}
---- !u!4 &1260473850 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
-    type: 3}
-  m_PrefabInstance: {fileID: 70570465}
-  m_PrefabAsset: {fileID: 0}
---- !u!21 &1264704948
+--- !u!21 &1239488125
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1938,6 +2091,97 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &1246575645
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!4 &1260473850 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
+    type: 3}
+  m_PrefabInstance: {fileID: 70570465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272190145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +2231,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1177665266}
+  - {fileID: 917525319}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2080,92 +2324,7 @@ MonoBehaviour:
     _usePolygonMap: 0
   wasConverted: 0
   preConvertedScale: {x: 0, y: 0, z: 0}
---- !u!21 &1273099629
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!21 &1301015340
+--- !u!21 &1323721331
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -2316,7 +2475,177 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1501641078
+--- !u!21 &1458875446
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &1459924490
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!21 &1465274366
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -2407,267 +2736,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1154722267}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1600108761
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!4 &1646950851 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4729291361357713306, guid: 65e39ba4882e69f44aa166a7e5f03d9b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4729291361166682375}
-  m_PrefabAsset: {fileID: 0}
---- !u!21 &1655443260
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!21 &1656760376
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &1659981503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2739,9 +2807,94 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 692792782}
+      objectReference: {fileID: 1046859737}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
+--- !u!21 &1661913624
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &1706103528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
@@ -2797,7 +2950,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1273099629}
+  - {fileID: 1904907513}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2939,7 +3092,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 873504067}
+  - {fileID: 563428670}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3038,6 +3191,91 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 761697916}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1763145775
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shapes2D Material
+  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR SIMPLE_ELLIPSE _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _ColorMask: 15
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shapes2D_DstAlpha: 1
+    - _Shapes2D_DstBlend: 10
+    - _Shapes2D_SrcAlpha: 1
+    - _Shapes2D_SrcBlend: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &1822784869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6783183357085575334, guid: d74300d7f6746f24893f2149ec44a2da,
@@ -3121,10 +3359,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2026177028}
+      objectReference: {fileID: 1133186865}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a327a83f7c39740b291beb0a83c294, type: 3}
---- !u!21 &1926958249
+--- !u!21 &1904907513
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -3133,7 +3371,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Shapes2D Material
   m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR POLYGON_16 _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -3209,6 +3447,81 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1001 &1960549109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3967438077089400686, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.891
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445423211160520597, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528698836154802361, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 531019379}
+    m_RemovedComponents:
+    - {fileID: 2086212892, guid: bd613fdec03b1624b8da0ca5788ac0b5, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: bd613fdec03b1624b8da0ca5788ac0b5, type: 3}
 --- !u!1001 &1965094200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3280,10 +3593,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1264704948}
+      objectReference: {fileID: 134107879}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
---- !u!21 &1974840582
+--- !u!21 &1972271833
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -3439,94 +3752,9 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1501641078}
+      objectReference: {fileID: 1246575645}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74300d7f6746f24893f2149ec44a2da, type: 3}
---- !u!21 &2026177028
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &2040573555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,91 +3793,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1659981503}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &2101539571
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Shapes2D Material
-  m_Shader: {fileID: 4800000, guid: 44f74e30da9814584b2fdcdbe799e51a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA FILL_SOLID_COLOR RECTANGLE _EMISSION
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _ColorMask: 15
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _Shapes2D_DstAlpha: 1
-    - _Shapes2D_DstBlend: 10
-    - _Shapes2D_SrcAlpha: 1
-    - _Shapes2D_SrcBlend: 1
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &3548168683425240873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3721,7 +3864,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1926958249}
+      objectReference: {fileID: 1458875446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a327a83f7c39740b291beb0a83c294, type: 3}
 --- !u!1001 &4729291361166682375
@@ -3795,36 +3938,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2101539571}
+      objectReference: {fileID: 1661913624}
     - target: {fileID: 4729291361357713309, guid: 65e39ba4882e69f44aa166a7e5f03d9b,
         type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 3967438077089400686, guid: bd613fdec03b1624b8da0ca5788ac0b5,
-        type: 3}
-    - target: {fileID: 4729291361357713309, guid: 65e39ba4882e69f44aa166a7e5f03d9b,
-        type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 330346221}
-    - target: {fileID: 4729291361357713309, guid: 65e39ba4882e69f44aa166a7e5f03d9b,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 3967438077089400686, guid: bd613fdec03b1624b8da0ca5788ac0b5,
-        type: 3}
-    - target: {fileID: 4729291361357713305, guid: 65e39ba4882e69f44aa166a7e5f03d9b,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
+      propertyPath: bulletForce
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 789632614, guid: 65e39ba4882e69f44aa166a7e5f03d9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 509811926}
-    m_RemovedComponents:
-    - {fileID: 1913114777, guid: 65e39ba4882e69f44aa166a7e5f03d9b, type: 3}
-    - {fileID: 1913114783, guid: 65e39ba4882e69f44aa166a7e5f03d9b, type: 3}
+      objectReference: {fileID: 1323721331}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e39ba4882e69f44aa166a7e5f03d9b, type: 3}
 --- !u!1001 &6233588435354576036
 PrefabInstance:
