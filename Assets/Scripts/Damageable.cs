@@ -6,25 +6,25 @@ using TMPro;
 
 public abstract class Damageable : MonoBehaviour
 {
-    [SerializeField] private float _totalHealth;
+    [SerializeField] protected float _totalHealth;
 
-    [SerializeField] private Vector2 _velocity;
+    [SerializeField] protected Vector3 _velocity;
 
-    private float _health;
+    protected float _health;
 
-    private TextMeshProUGUI _textMesh; 
+    protected TextMeshProUGUI _textMesh; 
 
     void Start()
     {
         _textMesh = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    private void TakeDamage(float damage)
+    protected void TakeDamage(float damage)
     {
         _health -= damage;
     }
 
-    private void Die()
+    protected void Die()
     {
         Destroy(gameObject);
     }
