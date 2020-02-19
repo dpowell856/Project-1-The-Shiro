@@ -32,10 +32,10 @@ public class CatapultProjectile : Damageable
             print("Wall has been hit!");
             Die();
         }
-        if (collision.CompareTag("Arrow")) {
+        //if (collision.CompareTag("Bullet")) {
             
-            print("A player projectile has just hit the catapult projectile");
-            TakeDamage(10);
-        }
+        //    print("A player projectile has just hit the catapult projectile");
+        //    TakeDamage(10);
+        //}
     }
 }

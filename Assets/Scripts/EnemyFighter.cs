@@ -9,17 +9,17 @@ public class EnemyFighter : Damageable
     [SerializeField] protected float _range;
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         fixedUpdate();
     }
 
-    void fixedUpdate()
+    protected void fixedUpdate()
     {
         move();
     }
 
-    void move()
+    protected void move()
     {
         Fighter closestPlayer = findPlayer();
         Vector3 direction = closestPlayer.transform.position - transform.position;
@@ -32,7 +32,7 @@ public class EnemyFighter : Damageable
     }    
 
 
-    Fighter findPlayer()
+    protected Fighter findPlayer()
     {
         float distanceToClosestPlayer = Mathf.Infinity;
         Fighter closestPlayer = null;

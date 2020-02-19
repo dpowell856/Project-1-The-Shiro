@@ -152,4 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxLifeTime: 0
-  MaxSize: {x: 0, y: 0, z: 0}
+  _velocity: {x: 0, y: 0, z: 0}
+  _maxSize: {x: 0, y: 0, z: 0}
