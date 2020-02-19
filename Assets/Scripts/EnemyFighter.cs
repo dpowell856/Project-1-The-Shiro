@@ -14,12 +14,10 @@ public class EnemyFighter : Damageable
         fixedUpdate();
     }
 
-
     void fixedUpdate()
     {
         move();
     }
-
 
     void move()
     {

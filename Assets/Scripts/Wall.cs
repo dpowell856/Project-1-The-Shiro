@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Wall : MonoBehaviour
+public class Wall : Damageable
 {
     [SerializeField] private float _selfDestructTime;
     [SerializeField] private float _repairTime;

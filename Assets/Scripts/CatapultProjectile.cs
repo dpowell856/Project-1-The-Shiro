@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CatapultProjectile : Damageable
 {
+    [SerializeField] protected Vector3 _velocity;
+
+    [SerializeField] private float _damage;
+
     // Start is called before the first frame update
     void Start() {
         
@@ -24,9 +28,8 @@ public class CatapultProjectile : Damageable
     private void OnTriggerStay2D(Collider2D collision) {
 
         if (collision.CompareTag("Wall")) {
-
+            collision.GetComponent<Wall>().TakeDamage(_damage);
             print("Wall has been hit!");
-            //Wall._life -= 100;
             Die();
         }
         if (collision.CompareTag("Arrow")) {

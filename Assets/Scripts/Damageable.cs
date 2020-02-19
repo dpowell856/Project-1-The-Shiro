@@ -8,8 +8,6 @@ public abstract class Damageable : MonoBehaviour
 {
     [SerializeField] protected float _totalHealth;
 
-    [SerializeField] protected Vector3 _velocity;
-
     protected float _health;
 
     protected TextMeshProUGUI _textMesh; 
@@ -19,7 +17,7 @@ public abstract class Damageable : MonoBehaviour
         _textMesh = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    protected void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         _health -= damage;
     }
