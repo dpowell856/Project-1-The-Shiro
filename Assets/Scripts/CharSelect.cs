@@ -7,18 +7,20 @@ public class CharSelect : MonoBehaviour
     
 {
 
-    public GameObject Char1;
-    public GameObject Char2;
-    public GameObject Char3;
+    [SerializeField] private GameObject Char1;
+    [SerializeField] private GameObject Char2;
+    [SerializeField] private GameObject Char3;
+    //[SerializeField] private GameObject Spawn;
     private Vector3 CharPos;
+    private Vector3 SPos;
     private Vector3 OffScreen;
-    private int num = 1;
-    private SpriteRenderer Char1Render, Char2Render, Char3Render;
+    private int num = 0;
+    private SpriteRenderer Char1Render, Char2Render, Char3Render, SpawnRender;
     public TextMeshProUGUI Text1, Text2, Text3;
-   
-
-
-
+    //private Sprite CharSprite;
+    private SpriteRenderer[] RenderList = new SpriteRenderer[3];
+    private GameObject[] CharList = new GameObject[3];
+    //[SerializeField] private ScriptableObject[] Charlist2 = new ScriptableObject[3];
 
     private void Awake()
     {
@@ -27,114 +29,73 @@ public class CharSelect : MonoBehaviour
         Char1Render = Char1.GetComponent<SpriteRenderer>();
         Char2Render = Char1.GetComponent<SpriteRenderer>();
         Char3Render = Char1.GetComponent<SpriteRenderer>();
-
-        
+        //SpawnRender = Spawn.GetComponent<SpriteRenderer>();
+       
+    }
+    private void Start()
+    {
+        RenderList[0] = Char1Render;
+        RenderList[1] = Char2Render;
+        RenderList[2] = Char3Render;
+        CharList[0] = Char1;
+        CharList[1] = Char2;
+        CharList[2] = Char3;
     }
 
 
 
     public void Update()
     {
-        if (num == 1)
-        {
-            Text1.text = Char1.GetComponentInChildren<CharInfo>().Name;
-            Text2.text = Char1.GetComponentInChildren<CharInfo>().Description;
-            Text3.text = "Hp " + Char1.GetComponentInChildren<CharInfo>().Hp + "\nStr " + Char1.GetComponentInChildren<CharInfo>().Str + "\nDex " + Char1.GetComponentInChildren<CharInfo>().Dex + "\nInt " + Char1.GetComponentInChildren<CharInfo>().Int;
-        }
-        else if (num == 2)
-        {
-            Text1.text = Char2.GetComponentInChildren<CharInfo>().Name;
-            Text2.text = Char2.GetComponentInChildren<CharInfo>().Description;
-            Text3.text = "Hp " + Char2.GetComponentInChildren<CharInfo>().Hp + "\nStr " + Char2.GetComponentInChildren<CharInfo>().Str + "\nDex " + Char2.GetComponentInChildren<CharInfo>().Dex + "\nInt " + Char2.GetComponentInChildren<CharInfo>().Int;
-        }
-        else if (num == 3)
-        {
-            Text1.text = Char3.GetComponentInChildren<CharInfo>().Name;
-            Text2.text = Char3.GetComponentInChildren<CharInfo>().Description;
-            Text3.text = "Hp " + Char3.GetComponentInChildren<CharInfo>().Hp + "\nStr " + Char3.GetComponentInChildren<CharInfo>().Str + "\nDex " + Char3.GetComponentInChildren<CharInfo>().Dex + "\nInt " + Char3.GetComponentInChildren<CharInfo>().Int;
-        }
-
+        Text1.text = CharList[num].GetComponentInChildren<CharInfo>().Name;
+        Text2.text = CharList[num].GetComponentInChildren<CharInfo>().Description;
+        Text3.text = "Hp " + CharList[num].GetComponentInChildren<CharInfo>().Hp + "\nStr " + CharList[num].GetComponentInChildren<CharInfo>().Str + "\nDex " + CharList[num].GetComponentInChildren<CharInfo>().Dex + "\nInt " + CharList[num].GetComponentInChildren<CharInfo>().Int;
+        
     }
-
-
-
 
     public void NextChar()
     {
-        switch (num)
+        RenderList[num].enabled = false;
+        CharList[num].transform.position = OffScreen;
+        if (num >= 2)
         {
-
-            case 1:
-                Char1Render.enabled = false;
-                Char1.transform.position = OffScreen;
-                Char2Render.enabled = true;
-                Char2.transform.position = CharPos;
-                num++;
-                break;
-            case 2:
-                Char2Render.enabled = false;
-                Char2.transform.position = OffScreen;
-                Char3Render.enabled = true;
-                Char3.transform.position = CharPos;
-                num++;
-                break;
-            case 3:
-                Char3Render.enabled = false;
-                Char3.transform.position = OffScreen;
-                Char1Render.enabled = true;
-                Char1.transform.position = CharPos;
-                NumReset();
-                break;
-            default:
-                NumReset();
-                break;
-
-        }
-
-    }
-
-    public void NumReset()
-    {
-        if (num >= 3)
-        {
-            num = 1;
+            NumReset();
         }
         else
         {
-            num = 3;
+            num++;
         }
+        RenderList[num].enabled = true;
+        CharList[num].transform.position = CharPos;
+        
     }
 
     public void PreviousChar()
     {
-        switch (num)
+        RenderList[num].enabled = false;
+        CharList[num].transform.position = OffScreen;
+        if (num <= 0)
         {
+            NumReset();
+        }
+        else
+        {
+            num--;
+        }
+        RenderList[num].enabled = true;
+        CharList[num].transform.position = CharPos;
+      
+    }
 
-            case 1:
-                Char1Render.enabled = false;
-                Char1.transform.position = OffScreen;
-                Char3Render.enabled = true;
-                Char3.transform.position = CharPos;
-                NumReset();
-                break;
-            case 2:
-                Char2Render.enabled = false;
-                Char2.transform.position = OffScreen;
-                Char1Render.enabled = true;
-                Char1.transform.position = CharPos;
-                num--;
-                break;
-            case 3:
-                Char3Render.enabled = false;
-                Char3.transform.position = OffScreen;
-                Char2Render.enabled = true;
-                Char2.transform.position = CharPos;
-                num--;
-                break;
-            default:
-                NumReset();
-                break;
-
+    public void NumReset()
+    {
+        if (num >= 2)
+        {
+            num = 0;
+        }
+        else
+        {
+            num = 2;
         }
     }
+
 }
