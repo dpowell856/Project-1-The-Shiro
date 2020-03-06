@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour
+public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
@@ -15,33 +15,40 @@ public class Fighter : MonoBehaviour
 
     private Vector2 _axisVector;
 
-
     private bool _dash;
     internal int position;
+    private float _health = 100;
 
     void Start()
     {
         player = Players.GetPlayer(_tempPlayerID);
     }
 
-    void Update()
+    protected virtual void Update()
     {
-        // GetAction is a boolean that returns true when the button is down
+        HandleInput();
+    }
+
+    private void HandleInput()
+    {
         if (player.GetAction(Action.Shoot))
         {
             Shoot();
         }
 
+        if (player.GetAction(Action.))
+        {
+            UseAbillity();
+        }
+
         if (player.GetAction(Action.Dash))
         {
-            print("PLAYER HAS DODGED");
             HandleNarutoInput();
         }
 
         HandleMovementInput();
     }
 
-    
     void FixedUpdate()
     {
         faceMouse();
@@ -51,6 +58,27 @@ public class Fighter : MonoBehaviour
             Dash();
             _dash = false;
         }
+    }
+
+    protected abstract void UseAbillity();
+
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
+        checkForDeath();
+    }
+
+    private void checkForDeath()
+    {
+        if(_health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
     private void HandleMovementInput()
@@ -81,6 +109,7 @@ public class Fighter : MonoBehaviour
         Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
         transform.up = direction;
     }
+
     private void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
