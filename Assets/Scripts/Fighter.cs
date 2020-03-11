@@ -17,9 +17,9 @@ public abstract class Fighter : MonoBehaviour
 
     private bool _dash;
     internal int position;
-    private float _health = 100;
+    protected float _health = 100;
 
-    void Start()
+    protected virtual void Start()
     {
         player = Players.GetPlayer(_tempPlayerID);
     }
@@ -36,10 +36,10 @@ public abstract class Fighter : MonoBehaviour
             Shoot();
         }
 
-        if (player.GetAction(Action.))
-        {
-            UseAbillity();
-        }
+        //if (player.GetAction(Action.))
+        //{
+            //UseAbillity();
+        //}
 
         if (player.GetAction(Action.Dash))
         {
