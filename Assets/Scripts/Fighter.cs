@@ -40,17 +40,10 @@ public abstract class Fighter : MonoBehaviour
             Shoot();
         }
 
-<<<<<<< HEAD
-        //if (player.GetAction(Action.))
-        //{
-            //UseAbillity();
-        //}
-=======
         if (player.GetAction(Action.Interact))
         {
             UseAbillity();
         }
->>>>>>> f7524f78c92403ce2e06956da2c2c8cec3fe49ad
 
         if (player.GetAction(Action.Dash))
         {
