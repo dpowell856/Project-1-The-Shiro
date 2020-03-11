@@ -6,6 +6,10 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _maxStamina;
+    [SerializeField] private float _stamina;
+    [SerializeField] private float _staminaRegenRate;
+    [SerializeField] private float _dashCost;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -36,7 +40,7 @@ public abstract class Fighter : MonoBehaviour
             Shoot();
         }
 
-        if (player.GetAction(Action.))
+        if (player.GetAction(Action.Interact))
         {
             UseAbillity();
         }
@@ -53,10 +57,11 @@ public abstract class Fighter : MonoBehaviour
     {
         faceMouse();
         HandleMovement();
-        if (_dash)
+        if (_dash && _stamina >= 1)
         {
             Dash();
             _dash = false;
+            _stamina -= 1;
         }
     }
 
@@ -99,6 +104,14 @@ public abstract class Fighter : MonoBehaviour
     private void Dash()
     {
         transform.position += new Vector3(_axisVector.x, _axisVector.y);
+    }
+
+    private void DashRegen()
+    {
+        if ((_stamina + (_maxStamina * _staminaRegenRate)) < _maxStamina)
+        {
+            _stamina += (_maxStamina * _staminaRegenRate);
+        }
     }
 
     void faceMouse()
