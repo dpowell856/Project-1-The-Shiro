@@ -35,11 +35,14 @@ public class CameraFighterFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        CalculateFighterBounds();
-        Move();
-        if (_fighters.Count > 1)
+        if(_fighters.Count > 0)
         {
-            Zoom();
+            CalculateFighterBounds();
+            Move();
+            if (_fighters.Count > 1)
+            {
+                Zoom();
+            }
         }
     }
 

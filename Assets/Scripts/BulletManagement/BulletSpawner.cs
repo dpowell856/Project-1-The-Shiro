@@ -8,19 +8,28 @@ public class BulletSpawner : MonoBehaviour {
 
     [SerializeField] Material _material;
 
-    //[SerializeField] GameObject _bullet;
-
     [SerializeField] Vector2 _maxBulletPosition;
 
     [SerializeField] int _maxBulletCount;
 
-    private GameObject[] _bullets;
+    [SerializeField] float _bulletInterval;
 
-    //private int _bulletsIndex = 0;
+    [SerializeField] float _bulletSpeed;
+
+    [SerializeField] float _damagePerBullet;
 
     private List<Matrix4x4> _transformMatrix = new List<Matrix4x4>();
 
     private float _time;
+
+    private float _lengthFighterAndBullet = 1;
+
+    private Fighter[] _fighters;
+
+    void Start()
+    {
+        _fighters = Fighters.GetAliveFighters(); //temp
+    }
 
     protected void SpawnBullet(Transform trans)
     {
@@ -28,26 +37,37 @@ public class BulletSpawner : MonoBehaviour {
         {
             DestroyBullet(_transformMatrix[0]);
         }
-        _transformMatrix.Add(Matrix4x4.TRS(trans.position, trans.rotation, trans.localScale));
+
+        Matrix4x4 matrix = new Matrix4x4();
+        matrix.SetTRS(trans.position, Quaternion.Euler(Vector3.zero), Vector3.one);
+        _transformMatrix.Add(matrix);
     }
 
     protected void DestroyBullet(Matrix4x4 transformMatrix)
     {
-        print("Destroyed");
         _transformMatrix.Remove(transformMatrix);
+    }
+
+    private void Update()
+    {
+        Graphics.DrawMeshInstanced(_mesh, 0, _material, _transformMatrix);
     }
 
     void FixedUpdate()
     {
+        HandleBulletGeneration();
+    }
+
+    protected void HandleBulletGeneration()
+    {
         _time += Time.fixedDeltaTime;
-        if(_time > 0.5f)
+        if (_time > _bulletInterval)
         {
             SpawnBullet(transform);
             _time = 0;
-            print("SpawnBullet");
         }
 
-        for(int i = 0; i < _transformMatrix.Count; i++)
+        for (int i = 0; i < _transformMatrix.Count; i++)
         {
             if (_transformMatrix[i].m03 < _maxBulletPosition.x)
             {
@@ -59,53 +79,40 @@ public class BulletSpawner : MonoBehaviour {
             }
             else
             {
-                print("Before: " + _transformMatrix[i].GetColumn(3));
-                _transformMatrix[i].SetColumn(3, _transformMatrix[i].GetColumn(3) + (Vector4)Vector3.left);
-                //MoveMatrix(matrix, Vector3.left);
-                print("After: " + _transformMatrix[i].GetColumn(3));
+                _transformMatrix[i] = MoveBullet(_transformMatrix[i]);
+                Fighter fighter = CheckForCollision(_transformMatrix[i]);
+
+                if (fighter != null)
+                {
+                    fighter.TakeDamage(_damagePerBullet);
+                    print("FIghter: " + fighter.name + " got hit for " + _damagePerBullet + " of damage");
+                    DestroyBullet(_transformMatrix[i]);
+                    break;
+                }
             }
         }
-
-        /*
-        foreach (Matrix4x4 matrix in _transformMatrix)
-        {
-            if (matrix.m03 < _maxBulletPosition.x)
-            {
-                DestroyBullet(matrix);
-            }
-            else if (matrix.m13 == _maxBulletPosition.y)
-            {
-                DestroyBullet(matrix);
-            }
-            else
-            {
-                print("Before: " + matrix.GetColumn(3));
-                Vector4 movementVector4 = (Vector4)Vector3.left;
-                movementVector4.w = 1;
-                matrix.SetColumn(3, matrix.GetColumn(3) + movementVector4);
-                //MoveMatrix(matrix, Vector3.left);
-                print("After: " + matrix.GetColumn(3));
-            }
-        }
-        */
-
-        Graphics.DrawMeshInstanced(_mesh, 0, _material, _transformMatrix);
     }
 
-    protected virtual void MoveMatrix(Matrix4x4 matrix, Vector3 movement)
+    protected virtual Matrix4x4 MoveBullet(Matrix4x4 matrix)
     {
-        Vector4 movementVector4 = (Vector4)movement;
-        movementVector4.w = 1;
-        matrix.SetColumn(3, matrix.GetColumn(3) + movementVector4);
+        return MoveMatrix(matrix, Vector3.left * _bulletSpeed);
     }
 
-    /*void Start()
+    protected Matrix4x4 MoveMatrix(Matrix4x4 matrix, Vector3 movement)
     {
-        _bullets = new GameObject[_maxBulletCount];
-        for(int i = 0; i < _maxBulletCount; i++)
+        matrix.SetColumn(3, matrix.GetColumn(3) + (Vector4)movement);
+        return matrix;
+    }
+
+    private Fighter CheckForCollision(Matrix4x4 matrix)
+    {
+        foreach(Fighter fighter in _fighters)
         {
-            _bullets[i] = Instantiate(_bullet);
-            _bullets[i].SetActive(false);
+            if (Vector2.Distance(matrix.GetColumn(3), fighter.transform.position) <= _lengthFighterAndBullet)
+            {
+                return fighter;
+            }
         }
-    }*/
+        return null;
+    }
 }

@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour
+public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _maxStamina;
+    [SerializeField] private float _stamina;
+    [SerializeField] private float _staminaRegenRate;
+    [SerializeField] private float _dashCost;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -22,22 +26,31 @@ public class Fighter : MonoBehaviour
     private Vector2 _axisVector;
     private Vector2 _mousePos;
 
-
     private bool _dash;
-    internal int _position;
+    internal int position;
+    protected float _health = 100;
 
-    void Start()
+    protected virtual void Start()
     {
         player = Players.GetPlayer(_tempPlayerID);
 
     }
 
-    void Update()
+    protected virtual void Update()
     {
-        // GetAction is a boolean that returns true when the button is down
+        HandleInput();
+    }
+
+    private void HandleInput()
+    {
         if (player.GetAction(Action.Shoot))
         {
             Shoot();
+        }
+
+        if (player.GetAction(Action.Interact))
+        {
+            UseAbillity();
         }
 
         if (player.GetAction(Action.Dash))
@@ -51,20 +64,41 @@ public class Fighter : MonoBehaviour
         _mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    
     void FixedUpdate()
     {
         //faceMouse();
         HandleMovement();
-        if (_dash)
+        if (_dash && _stamina >= 1)
         {
             Dash();
             _dash = false;
+            _stamina -= 1;
         }
 
         Vector2 lookDir = _mousePos - _rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
         _rb.rotation = angle;
+    }
+
+    protected abstract void UseAbillity();
+
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
+        checkForDeath();
+    }
+
+    private void checkForDeath()
+    {
+        if(_health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
     private void HandleMovementInput()
@@ -85,6 +119,14 @@ public class Fighter : MonoBehaviour
     private void Dash()
     {
         transform.position += new Vector3(_axisVector.x, _axisVector.y);
+    }
+
+    private void DashRegen()
+    {
+        if ((_stamina + (_maxStamina * _staminaRegenRate)) < _maxStamina)
+        {
+            _stamina += (_maxStamina * _staminaRegenRate);
+        }
     }
 
     private void Shoot()
