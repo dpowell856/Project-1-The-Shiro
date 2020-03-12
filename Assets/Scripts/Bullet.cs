@@ -5,12 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [SerializeField] private float _force;
+    private float _speed = 10;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = transform.right * Time.deltaTime * _force;
+        //transform.Translate(Vector2. * Time.deltaTime);
     }
 
     void OnBecameInvisible()
