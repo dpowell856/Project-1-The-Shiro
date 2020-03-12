@@ -30,9 +30,10 @@ public abstract class Fighter : MonoBehaviour
     internal int position;
     protected float _health = 100;
 
-    protected virtual void Start()
+    void Start()
     {
         player = Players.GetPlayer(_tempPlayerID);
+        PassiveAbillity();
 
     }
 
@@ -81,6 +82,8 @@ public abstract class Fighter : MonoBehaviour
     }
 
     protected abstract void UseAbillity();
+
+    protected virtual void PassiveAbillity() {}
 
     public void TakeDamage(float damage)
     {

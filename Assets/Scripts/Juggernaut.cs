@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Juggernaut : Fighter
 {   
-    protected override void Start()
+    protected override void PassiveAbillity()
     {
         StartCoroutine(RegenHealth());
 	}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ninja : Fighter
 {   
-    protected override void Start()
+    protected override void PassiveAbillity()
     {
     // Will call a function to regen stamina faster
 	}
