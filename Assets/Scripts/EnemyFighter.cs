@@ -50,4 +50,18 @@ public class EnemyFighter : Damageable
         Debug.DrawLine(this.transform.position, closestPlayer.transform.position);
         return closestPlayer;     
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            Destroy(collision.gameObject);
+            TakeDamage(5);
+            
+            if(_health <= 0)
+            {
+                Die();
+            }
+        }
+    }
 }

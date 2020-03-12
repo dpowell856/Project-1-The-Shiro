@@ -5,11 +5,10 @@ using UnityEngine;
 
 public abstract class Fighter : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private float _maxStamina;
-    [SerializeField] private float _stamina;
+    [SerializeField] private float _speed = 0.2f;
+    [SerializeField] private float _maxStamina = 5f;
+    [SerializeField] private float _stamina = 5f;
     [SerializeField] private float _staminaRegenRate;
-    [SerializeField] private float _dashCost;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -17,7 +16,6 @@ public abstract class Fighter : MonoBehaviour
 
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _firePoint;
-    [SerializeField] private float _bulletForce = 20f;
 
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Camera _cam;
@@ -75,6 +73,8 @@ public abstract class Fighter : MonoBehaviour
             _stamina -= 1;
         }
 
+        DashRegen();
+
         Vector2 lookDir = _mousePos - _rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
         _rb.rotation = angle;
@@ -123,16 +123,14 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-        if ((_stamina + (_maxStamina * _staminaRegenRate)) < _maxStamina)
+        if ((_stamina +  _staminaRegenRate) < _maxStamina)
         {
-            _stamina += (_maxStamina * _staminaRegenRate);
+            _stamina += _staminaRegenRate;
         }
     }
 
     private void Shoot()
     {
         GameObject bullet = Instantiate(_bulletPrefab, _firePoint.position, transform.rotation);
-        //Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        //bulletRb.AddForce(_firePoint.up * _bulletForce, ForceMode2D.Impulse);
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Juggernaut : Fighter
 {   
-    protected override void Start()
+    /*protected override void Start()
     {
         StartCoroutine(RegenHealth());
-	}
+	}*/
 
     protected override void Update()
     {

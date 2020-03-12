@@ -5,16 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    private float _speed = 10;
+     private float _speed = 20;
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        //transform.Translate(Vector2. * Time.deltaTime);
+        transform.position += transform.TransformDirection(Vector3.up) * Time.deltaTime * _speed;
     }
 
     void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
+
 }
