@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
      private float _speed = 20;
+     private float _speed = 30;
 
     // Update is called once per frame
     void FixedUpdate()
