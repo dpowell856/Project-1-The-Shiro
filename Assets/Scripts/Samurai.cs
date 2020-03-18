@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Samurai : Fighter
 {   
-    protected override void Start()
+    protected override void PassiveAbillity()
     {
         this._health = 150;
 	}
