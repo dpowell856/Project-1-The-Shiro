@@ -6,10 +6,9 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _maxStamina;
+    [SerializeField] private float _maxStamina = 5;
     [SerializeField] private float _stamina;
-    [SerializeField] private float _staminaRegenRate;
-    [SerializeField] private float _dashCost;
+    [SerializeField] private float _staminaRegenRate = 1/2;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -34,7 +33,7 @@ public abstract class Fighter : MonoBehaviour
     {
         player = Players.GetPlayer(_tempPlayerID);
         PassiveAbillity();
-
+        _stamina = _maxStamina;
     }
 
     protected virtual void Update()
@@ -74,6 +73,10 @@ public abstract class Fighter : MonoBehaviour
             Dash();
             _dash = false;
             _stamina -= 1;
+        }
+        else if (_dash && _stamina <= 1)
+        {
+            print("Not enough stamina");
         }
 
         Vector2 lookDir = _mousePos - _rb.position;
@@ -126,9 +129,9 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-        if ((_stamina + (_maxStamina * _staminaRegenRate)) < _maxStamina)
+        if ((_stamina + _staminaRegenRate) < _maxStamina)
         {
-            _stamina += (_maxStamina * _staminaRegenRate);
+            _stamina += _staminaRegenRate;
         }
     }
 
