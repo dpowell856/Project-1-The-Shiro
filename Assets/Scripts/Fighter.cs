@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _maxStamina;
+    [SerializeField] private float _maxStamina = 5;
     [SerializeField] private float _stamina;
     [SerializeField] private float _staminaRegenRate;
     [SerializeField] private float _dashCost;
@@ -35,7 +35,7 @@ public abstract class Fighter : MonoBehaviour
         player = Players.GetPlayer(_tempPlayerID);
         _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
         PassiveAbillity();
-
+        _stamina = _maxStamina;
     }
 
     void FixedUpdate()
@@ -132,9 +132,9 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-        if ((_stamina + (_maxStamina * _staminaRegenRate)) < _maxStamina)
+        if ((_stamina + _staminaRegenRate) < _maxStamina)
         {
-            _stamina += (_maxStamina * _staminaRegenRate);
+            _stamina += _staminaRegenRate;
         }
     }
 
