@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Samurai : Fighter
 {   
-    protected override void PassiveAbillity()
+    protected override void Start()
     {
+        base.Start();
         this._health = 150;
 	}
 
