@@ -5,6 +5,7 @@ using UnityEngine;
 
 public abstract class Fighter : MonoBehaviour
 {
+
     [SerializeField] private float _speed;
     [SerializeField] private float _maxStamina = 5;
     [SerializeField] private float _stamina;
@@ -18,7 +19,6 @@ public abstract class Fighter : MonoBehaviour
 
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _firePoint;
-    [SerializeField] private float _bulletForce = 20f;
 
     private Camera _mainCamera;
 
@@ -129,7 +129,9 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
+
         if ((_stamina + _staminaRegenRate) < _maxStamina)
+
         {
             _stamina += _staminaRegenRate;
         }

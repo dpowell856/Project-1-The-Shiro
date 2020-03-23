@@ -15,6 +15,7 @@ public abstract class Damageable : MonoBehaviour
     void Start()
     {
         _textMesh = GetComponentInChildren<TextMeshProUGUI>();
+        _health = _totalHealth;
     }
 
     public void TakeDamage(float damage)
