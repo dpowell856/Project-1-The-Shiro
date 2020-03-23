@@ -5,10 +5,13 @@ using UnityEngine;
 
 public abstract class Fighter : MonoBehaviour
 {
-    [SerializeField] private float _speed = 0.2f;
-    [SerializeField] private float _maxStamina = 5f;
-    [SerializeField] private float _stamina = 5f;
+
+    [SerializeField] private float _speed;
+    [SerializeField] private float _maxStamina = 5;
+    [SerializeField] private float _stamina;
     [SerializeField] private float _staminaRegenRate;
+    [SerializeField] private float _dashCost;
+    [SerializeField] private float _maxHealth;
 
     [SerializeField] private Player.ID _tempPlayerID;
 
@@ -17,22 +20,34 @@ public abstract class Fighter : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _firePoint;
 
-    [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private Camera _cam;
-
+    private Camera _mainCamera;
 
     private Vector2 _axisVector;
     private Vector2 _mousePos;
 
     private bool _dash;
     internal int position;
-    protected float _health = 100;
+    protected float _health;
 
     void Start()
     {
+        _health = _maxHealth;
         player = Players.GetPlayer(_tempPlayerID);
+        _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
         PassiveAbillity();
+        _stamina = _maxStamina;
+    }
 
+    void FixedUpdate()
+    {
+        HandleMovement();
+        HandleRotation();
+        if (_dash && _stamina >= 1)
+        {
+            Dash();
+            _dash = false;
+            _stamina -= 1;
+        }
     }
 
     protected virtual void Update()
@@ -60,12 +75,11 @@ public abstract class Fighter : MonoBehaviour
 
 
         HandleMovementInput();
-        _mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
+        _mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    void FixedUpdate()
+    private void HandleRotation()
     {
-        //faceMouse();
         HandleMovement();
         if (_dash && _stamina >= 1)
         {
@@ -79,23 +93,29 @@ public abstract class Fighter : MonoBehaviour
         Vector2 lookDir = _mousePos - _rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
         _rb.rotation = angle;
+        
+        transform.LookAt(_mousePos);
     }
 
     protected abstract void UseAbillity();
 
     protected virtual void PassiveAbillity() {}
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float amount)
     {
-        _health -= damage;
-        checkForDeath();
-    }
-
-    private void checkForDeath()
-    {
-        if(_health <= 0)
+        _health -= amount;
+        if (_health <= 0)
         {
             Die();
+        }
+    }
+
+    public void Heal(float amount)
+    {
+        _health += amount;
+        if(_health > _maxHealth)
+        {
+            _health = _maxHealth;
         }
     }
 
@@ -126,7 +146,9 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-        if ((_stamina +  _staminaRegenRate) < _maxStamina)
+
+        if ((_stamina + _staminaRegenRate) < _maxStamina)
+
         {
             _stamina += _staminaRegenRate;
         }
