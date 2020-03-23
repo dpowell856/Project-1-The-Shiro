@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Juggernaut : Fighter
-{   
-    protected override void PassiveAbillity()
+{
+    [SerializeField] private float _heathRegenerationAmount;
+    [SerializeField] private float _healthRegenerationInterval;
+
+    protected override void Start()
     {
+        base.Start();
         StartCoroutine(RegenHealth());
 	}
 
     protected override void Update()
     {
         base.Update();
-
     }
 
     protected override void UseAbillity()
@@ -24,17 +27,8 @@ public class Juggernaut : Fighter
     {
         while(_health > 0)
         {
-            if(_health < 100)
-            {
-                yield return new WaitForSeconds(2);
-                _health += 1;
-                print("regenerated");
-            }
-            else
-            {
-                yield return new WaitForSeconds(2);
-                print("not regenerated");
-			}
+            Heal(_heathRegenerationAmount);
+            yield return new WaitForSeconds(_healthRegenerationInterval);
         }
     }
 }

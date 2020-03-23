@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Mage : Fighter
 {   
-    protected override void PassiveAbillity()
+    protected override void Start()
     {
+        base.Start();
         this._health = 50;
         // Will call a function which will enable mage to light fires instantly
 	}

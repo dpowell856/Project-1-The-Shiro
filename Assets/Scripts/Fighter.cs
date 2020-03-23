@@ -29,12 +29,11 @@ public abstract class Fighter : MonoBehaviour
     internal int position;
     protected float _health;
 
-    void Start()
+    protected virtual void Start()
     {
         _health = _maxHealth;
         player = Players.GetPlayer(_tempPlayerID);
         _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
-        PassiveAbillity();
         _stamina = _maxStamina;
     }
 
@@ -73,19 +72,16 @@ public abstract class Fighter : MonoBehaviour
             HandleDashInput();
         }
 
-
         HandleMovementInput();
         _mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void HandleRotation()
     {
-        transform.LookAt(_mousePos);
+        transform.up = _mousePos - (Vector2)transform.position;
     }
 
     protected abstract void UseAbillity();
-
-    protected virtual void PassiveAbillity() {}
 
     public void TakeDamage(float amount)
     {
@@ -107,6 +103,7 @@ public abstract class Fighter : MonoBehaviour
 
     private void Die()
     {
+        print("player: " + this.name + ", has died");
         Destroy(gameObject);
     }
 
