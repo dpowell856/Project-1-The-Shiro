@@ -193,9 +193,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0
+  _maxStamina: 5
+  _stamina: 0
+  _staminaRegenRate: 0
+  _dashCost: 0
+  _maxHealth: 0
   _tempPlayerID: 0
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  _bulletPrefab: {fileID: 0}
+  _firePoint: {fileID: 0}
 --- !u!1 &8307883842796643552
 GameObject:
   m_ObjectHideFlags: 0
