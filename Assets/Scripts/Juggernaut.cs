@@ -8,7 +8,7 @@ public class Juggernaut : Fighter
     protected override void PassiveAbillity()
     {
         StartCoroutine(RegenHealth());
-	}*/
+	}
 
     protected override void Update()
     {

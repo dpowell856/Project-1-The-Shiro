@@ -21,6 +21,7 @@ public abstract class Fighter : MonoBehaviour
     [SerializeField] private Transform _firePoint;
 
     private Camera _mainCamera;
+    
 
     private Vector2 _axisVector;
     private Vector2 _mousePos;
