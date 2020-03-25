@@ -40,14 +40,14 @@ public class Fireplaces : MonoBehaviour
             _fireplaces[i].setActive(false);
         }
 
-        int _random = Random.Range(4, 7);  
+        int _random = Random.Range(4, 6);  
 
         for (int i = 0; i < _random; i++)
         {
             int _activateFire = Random.Range(0, _fireplaces.Length);
             while (_fireplaces[_activateFire].isActive() == true)
             {
-                _activateFire = Random.Range(0, _fireplaces.Length);
+                _activateFire = Random.Range(1, _fireplaces.Length);
             }
             _fireplaces[_activateFire].setActive(true);
         }

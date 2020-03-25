@@ -7,7 +7,7 @@ public class Fireplace : MonoBehaviour
     private bool _lit = false;
     private bool _active;
 
-    private float _timeLeft = 2.0f;
+    private float _timeLeft = 0.5f;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -43,11 +43,13 @@ public class Fireplace : MonoBehaviour
         }
     }
 
+    // Returns if the fireplace is already active
     public bool isActive()
     {
         return _lit;
     }
 
+    // Returns if the fireplace state is complete
     public bool isDone()
     {
         if (_lit || !_active)
@@ -59,8 +61,11 @@ public class Fireplace : MonoBehaviour
         }
     }
 
+    // Sets the fireplaces active state
     public void setActive(bool activate)
     {
         _active = activate;
+        _lit = false;
+        _timeLeft = 0.5f;
     }
 }
