@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Ninja : Fighter
 {   
+
+    //Has a higher "_staminaRegenRate" serialized value than other fighters
+
     protected override void Start()
     {
         base.Start();
-    // Will call a function to regen stamina faster
 	}
 
     protected override void Update()
