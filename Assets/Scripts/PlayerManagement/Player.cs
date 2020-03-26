@@ -5,7 +5,8 @@ using UnityEngine;
 public enum Action {
     Dash,
     Interact,
-    Shoot
+    Shoot,
+    Abillity
 };
 
 public enum Axis {

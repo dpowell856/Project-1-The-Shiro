@@ -21,7 +21,6 @@ public class SpawnZone : MonoBehaviour
 
     private void Start()
     {
-        //GetComponent<Shape>().
         Vector2 size = transform.localScale;
         topRightCornerCoordinates = new Vector2(transform.position.x + size.x / 2, transform.position.y + size.y / 2);
         bottomLeftCoordinates = topRightCornerCoordinates - size;
