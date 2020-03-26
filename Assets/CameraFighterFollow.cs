@@ -27,7 +27,13 @@ public class CameraFighterFollow : MonoBehaviour
 
     void Start()
     {
-        foreach(Fighter fighter in FindObjectsOfType<Fighter>())
+        StartCoroutine(FindAllPlayers());
+    }
+
+    private IEnumerator FindAllPlayers()
+    {
+        yield return new WaitForSeconds(0.3f);
+        foreach (Fighter fighter in FindObjectsOfType<Fighter>())
         {
             _fighters.Add(fighter.transform);
         }
