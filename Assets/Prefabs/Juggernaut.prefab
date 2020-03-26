@@ -85,18 +85,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505d48637383c594aa496a9d625d4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: 0.1
   _maxStamina: 5
   _stamina: 0
-  _staminaRegenRate: 0
-  _dashCost: 0
-  _maxHealth: 0
+  _staminaRegenRate: 1
+  _dashCost: 1
+  _maxHealth: 100
   _tempPlayerID: 0
-  _bulletPrefab: {fileID: 0}
-  _firePoint: {fileID: 0}
-  _bulletForce: 20
-  _heathRegenerationAmount: 0
-  _healthRegenerationInterval: 0
+  _bulletPrefab: {fileID: 3967438077089400686, guid: bd613fdec03b1624b8da0ca5788ac0b5,
+    type: 3}
+  _firePoint: {fileID: 8307883842796643553}
+  _heathRegenerationAmount: 1
+  _healthRegenerationInterval: 0.4
 --- !u!212 &8074590375303244671
 SpriteRenderer:
   m_ObjectHideFlags: 0

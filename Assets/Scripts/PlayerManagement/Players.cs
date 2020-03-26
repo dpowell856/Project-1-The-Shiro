@@ -25,9 +25,4 @@ public static class Players {
     {
         _players.Add(player);
     }
-
-    /*public static void RemovePlayer(Player player)
-    {
-        _players[(int)player.GetID()] = null;
-    }*/
 }
