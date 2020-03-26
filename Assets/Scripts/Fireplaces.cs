@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Fireplaces : MonoBehaviour
 {
     private Fireplace[] _fireplaces;
     private int _wave = 0;
 
+    private TextMeshProUGUI _announcementText;
+
     void Start()
     {
         _fireplaces = GetComponentsInChildren<Fireplace>();
+        _announcementText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     void Update()
@@ -35,6 +39,8 @@ public class Fireplaces : MonoBehaviour
 
     private void StartNextWave()
     {
+        _announcementText.text = "Round " + (_wave + 1);
+        
         for (int i = 0; i < _fireplaces.Length; i++)
         {
             _fireplaces[i].setActive(false);

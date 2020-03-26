@@ -36,6 +36,7 @@ public abstract class Fighter : MonoBehaviour
         player = Players.GetPlayer(_tempPlayerID);
         _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
         _stamina = _maxStamina;
+        InvokeRepeating("DashRegen", 1.0f, 1.0f);
     }
 
     void FixedUpdate()
@@ -69,7 +70,6 @@ public abstract class Fighter : MonoBehaviour
 
         if (player.GetAction(Action.Dash))
         {
-            print("PLAYER HAS DODGED");
             HandleDashInput();
         }
 
@@ -130,8 +130,7 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-
-        if ((_stamina + _staminaRegenRate) < _maxStamina)
+        if ((_stamina + _staminaRegenRate) <= _maxStamina)
 
         {
             _stamina += _staminaRegenRate;
