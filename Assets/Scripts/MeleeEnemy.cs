@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeEnemy : EnemyFighter
 {
 
-    void fixedUpdate()
+    void FixedUpdate()
     {
         move();
     }
