@@ -10,7 +10,9 @@ public enum Action {
 
 public enum Axis {
     Horizontal,
-    Vertical
+    Vertical,
+    LookHorizontal,
+    LookVertical
 };
 
 public class Player {
@@ -28,9 +30,10 @@ public class Player {
         player3 = 3
     };
 
-    public Player(ID playerID)
+    public Player(ID playerIDSet)
     {
-        _player = Rewired.ReInput.players.GetPlayer((int)playerID);
+        _player = Rewired.ReInput.players.GetPlayer((int)playerIDSet);
+        playerID = playerIDSet; 
     }
 
     public bool GetAction(Action action)

@@ -6,35 +6,49 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
 
-    [SerializeField] private float _speed;
-    [SerializeField] private float _maxStamina = 5;
-    [SerializeField] private float _stamina;
-    [SerializeField] private float _staminaRegenRate;
-    [SerializeField] private float _dashCost;
-    [SerializeField] private float _maxHealth;
-
-    [SerializeField] private Player.ID _tempPlayerID;
+    private float _speed;
+    private float _maxStamina;
+    private float _staminaRegenRate;
+    private float _maxHealth;
 
     public Player player { get; private set; }
 
     [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private Transform _firePoint;
+
+    private Transform _firePoint;
 
     private Camera _mainCamera;
-    
 
     private Vector2 _axisVector;
+    private Vector2 _lookAxisVector;
     private Vector2 _mousePos;
 
     private bool _dash;
-    internal int position;
     protected float _health;
+    private float _stamina;
+
+    private bool _useMouse;
+
+    private void Awake()
+    {
+        _firePoint = transform.GetChild(1); //trash but will work
+    }
 
     protected virtual void Start()
     {
-        _health = _maxHealth;
-        player = Players.GetPlayer(_tempPlayerID);
         _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
+    }
+
+    public void Instatiate(Player.ID playerID, float speed, float maxHealth, float maxStamina, float staminaRegenRate, bool useMouse = false)
+    {
+        player = Players.GetPlayer(playerID);
+        _speed = speed;
+        _maxHealth = maxHealth;
+        _maxStamina = maxStamina;
+        _staminaRegenRate = staminaRegenRate;
+        _useMouse = useMouse;
+
+        _health = _maxHealth;
         _stamina = _maxStamina;
     }
 
@@ -69,17 +83,24 @@ public abstract class Fighter : MonoBehaviour
 
         if (player.GetAction(Action.Dash))
         {
-            print("PLAYER HAS DODGED");
             HandleDashInput();
         }
 
         HandleMovementInput();
+        HandleLookInput();
         _mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void HandleRotation()
     {
-        transform.up = _mousePos - (Vector2)transform.position;
+        if(_lookAxisVector != Vector2.zero)
+        {
+            transform.up = _lookAxisVector;
+        }
+        if (_useMouse)
+        {
+            transform.up = _mousePos - (Vector2)transform.position;
+        }
     }
 
     protected abstract void UseAbillity();
@@ -108,6 +129,11 @@ public abstract class Fighter : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void HandleLookInput()
+    {
+        _lookAxisVector = new Vector2(player.GetAxis(Axis.LookHorizontal), player.GetAxis(Axis.LookVertical));
+    }
+
     private void HandleMovementInput()
     {
         _axisVector = new Vector2(player.GetAxis(Axis.Horizontal), player.GetAxis(Axis.Vertical));
@@ -115,6 +141,7 @@ public abstract class Fighter : MonoBehaviour
 
     private void HandleMovement()
     {
+        
         transform.position += new Vector3(_axisVector.x, _axisVector.y) * _speed;
     }
 
