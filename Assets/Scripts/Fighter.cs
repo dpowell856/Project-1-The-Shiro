@@ -50,6 +50,7 @@ public abstract class Fighter : MonoBehaviour
 
         _health = _maxHealth;
         _stamina = _maxStamina;
+        InvokeRepeating("DashRegen", 1.0f, 1.0f);
     }
 
     void FixedUpdate()
@@ -157,8 +158,7 @@ public abstract class Fighter : MonoBehaviour
 
     private void DashRegen()
     {
-
-        if ((_stamina + _staminaRegenRate) < _maxStamina)
+        if ((_stamina + _staminaRegenRate) <= _maxStamina)
 
         {
             _stamina += _staminaRegenRate;

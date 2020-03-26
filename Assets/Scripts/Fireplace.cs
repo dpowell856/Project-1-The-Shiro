@@ -7,9 +7,11 @@ public class Fireplace : MonoBehaviour
     private bool _lit = false;
     private bool _active;
 
-    private float _timeLeft = 2.0f;
+    private float _timeLeft = 0.5f;
 
     private SpriteRenderer _spriteRenderer;
+
+    [SerializeField] private Sprite[] sprites;
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +21,16 @@ public class Fireplace : MonoBehaviour
 
     private void Update()
     {
+        Color _blank = new Color(0, 0, 0);
         if (!_active){
-            _spriteRenderer.color = new Color(0, 0, 0);
+            _spriteRenderer.sprite = sprites[1];
         } else if (_active && !_lit)
         {
-            _spriteRenderer.color = new Color(255, 255, 255);
+            _spriteRenderer.sprite = sprites[0];
         } else
         {
-            _spriteRenderer.color = new Color(255, 0, 0);
+            _spriteRenderer.sprite = sprites[2];
+            activatedAnimation();
         }
     }
 
@@ -43,11 +47,13 @@ public class Fireplace : MonoBehaviour
         }
     }
 
+    // Returns if the fireplace is already active
     public bool isActive()
     {
         return _lit;
     }
 
+    // Returns if the fireplace state is complete
     public bool isDone()
     {
         if (_lit || !_active)
@@ -59,8 +65,16 @@ public class Fireplace : MonoBehaviour
         }
     }
 
+    // Sets the fireplaces active state
     public void setActive(bool activate)
     {
         _active = activate;
+        _lit = false;
+        _timeLeft = 0.5f;
+    }
+
+    private void activatedAnimation()
+    {
+
     }
 }
