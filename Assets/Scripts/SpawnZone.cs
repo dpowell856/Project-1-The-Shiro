@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnZone : MonoBehaviour
 {
-    [SerializeField] public struct SpawnInfo {
+    [System.Serializable] public struct SpawnInfo {
         public GameObject objectToSpawn;
         public float spawnFrequency;
         public float spawnFrequencyRandomnessSkew;
