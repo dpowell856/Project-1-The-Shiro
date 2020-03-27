@@ -11,11 +11,9 @@ public class Wall : Damageable
 
     private float _life;
 
-    private TextMeshProUGUI _lifeText;
-
     void Awake()
     {
-        _lifeText = GetComponentInChildren<TextMeshProUGUI>();
+        //_lifeText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     void Start()
@@ -51,7 +49,7 @@ public class Wall : Damageable
 
     private void ShowCurrentLife()
     {
-        _lifeText.text = Mathf.CeilToInt(_life) + " / " + _totalLife;
+        //_lifeText.text = Mathf.CeilToInt(_life) + " / " + _totalLife;
     }
 
     private void Break()
