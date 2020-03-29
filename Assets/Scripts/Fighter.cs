@@ -25,7 +25,7 @@ public abstract class Fighter : MonoBehaviour
 
     private bool _dash;
     protected float _health;
-    private float _stamina;
+    protected float _stamina;
 
     private bool _useMouse;
 
@@ -37,6 +37,7 @@ public abstract class Fighter : MonoBehaviour
     protected virtual void Start()
     {
         _mainCamera = FindObjectOfType<Camera>(); //change if multiple cameras
+        InvokeRepeating("DashRegen", 1.0f, 1.0f);
     }
 
     public void Instatiate(Player.ID playerID, float speed, float maxHealth, float maxStamina, float staminaRegenRate, bool useMouse = false)
