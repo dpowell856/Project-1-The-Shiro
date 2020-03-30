@@ -16,7 +16,7 @@ MonoBehaviour:
   _characterSprite: {fileID: 21300000, guid: ed5bbb6ab24d70247884450d11d7e730, type: 3}
   _characterGameObject: {fileID: 3668842948459857298, guid: 56ce890bcecaa6c4bab49134a425e2df,
     type: 3}
-  _speed: 0.08
+  _speed: 0.11
   _health: 150
   _maxStamina: 0
   _staminaRegenRate: 0

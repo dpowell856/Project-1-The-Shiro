@@ -20,11 +20,11 @@ public class Fireplaces : MonoBehaviour
     {
         if (IsAllActiveFireplacesLit() || _wave == 0)
         {
-            StartNextWave();
+            //StartNextWave();
         }
     }
 
-    private bool IsAllActiveFireplacesLit()
+    public bool IsAllActiveFireplacesLit()
     {
         bool allActive = true;
         for(int i = 0; i < _fireplaces.Length; i++)
@@ -37,7 +37,7 @@ public class Fireplaces : MonoBehaviour
         //loop through activated fireplaces and check if their all lit return true
     }
 
-    private void StartNextWave()
+    /*private void StartNextWave()
     {
         _announcementText.text = "Round " + (_wave + 1);
         
@@ -58,5 +58,5 @@ public class Fireplaces : MonoBehaviour
             _fireplaces[_activateFire].setActive(true);
         }
         _wave += 1;
-    }
+    }*/
 }

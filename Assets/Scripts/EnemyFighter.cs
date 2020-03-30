@@ -2,66 +2,99 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFighter : Damageable
-{
+public class EnemyFighter : Damageable {
 
-    [SerializeField] protected float _speed;
-    [SerializeField] protected float _range;
+    protected float _speed, _rangeFromEnemys, _rangeFromPlayer;
 
-    // Update is called once per frame
-    protected void Update()
+    protected Transform _closestsEnemyFighter { get; private set; }
+    protected Transform _closetsFighter { get; private set; }
+
+    public virtual void Instantiate(float speed, float rangeFromEnemys, float  rangeFromPlayer)
     {
-        fixedUpdate();
+        _speed = speed;
+        _rangeFromEnemys = rangeFromEnemys;
+        _rangeFromPlayer = rangeFromPlayer;
     }
 
-    protected void fixedUpdate()
+    protected override void Start()
+    {
+        base.Start();
+        StartCoroutine(FindTargets());
+    }
+
+    protected virtual void FixedUpdate()
     {
         move();
     }
 
-    protected void move()
+    private IEnumerator FindTargets()
     {
-        Fighter closestPlayer = findPlayer();
-        Vector3 direction = closestPlayer.transform.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = rotation;
-        if ( _range <= (closestPlayer.transform.position - this.transform.position).sqrMagnitude)
+        while (true)
         {
-            transform.position += direction * 0.01f;
-        }
-    }    
-
-
-    protected Fighter findPlayer()
-    {
-        float distanceToClosestPlayer = Mathf.Infinity;
-        Fighter closestPlayer = null;
-        Fighter[] allPlayers = GameObject.FindObjectsOfType<Fighter>();
-
-        foreach(Fighter currentPlayer in allPlayers)
-        {
-            float distanceToPlayer = (currentPlayer.transform.position - this.transform.position).sqrMagnitude;
-            if (distanceToPlayer < distanceToClosestPlayer)
+            _closetsFighter = FindClosest<Fighter>();
+            Transform trans = FindClosest<EnemyFighter>();
+            if (trans != _closestsEnemyFighter)
             {
-                distanceToClosestPlayer = distanceToPlayer;
-                closestPlayer = currentPlayer;
+                _closestsEnemyFighter = FindClosest<EnemyFighter>();
+                yield return 60;
             }
+            yield return 10;
         }
-        Debug.DrawLine(this.transform.position, closestPlayer.transform.position);
-        return closestPlayer;     
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void move()
     {
-        if (collision.CompareTag("Bullet"))
+        Vector2 directionToMove = Vector2.zero;
+
+        transform.up = _closetsFighter.position - transform.position;
+        if(_rangeFromPlayer <= Vector2.Distance(_closetsFighter.position, transform.position))
         {
-            Destroy(collision.gameObject);
-            TakeDamage(5);
-            
-            if(_health <= 0)
+            directionToMove = transform.up;
+        }
+
+        if (_closestsEnemyFighter)
+        {
+            Vector3 enemyPositionRelativeToThis = _closestsEnemyFighter.position - transform.position;
+            if (_rangeFromEnemys >= enemyPositionRelativeToThis.sqrMagnitude)
             {
-                Die();
+                directionToMove += -(Vector2)enemyPositionRelativeToThis.normalized;
+                directionToMove.Normalize();
             }
         }
+
+        transform.position += (Vector3)directionToMove * _speed;
+    }
+
+    private Vector2 FindClosetsPosition<T>() where T : MonoBehaviour
+    {
+        return (Vector2)FindClosest<T>().position - (Vector2)transform.position;
+    }
+
+    private Transform FindClosest<T>() where T: MonoBehaviour
+    {
+        float distanceToClosestT = Mathf.Infinity;
+        T closestT = null;
+        T[] allT = GameObject.FindObjectsOfType<T>();
+
+        foreach (T t in allT)
+        {
+            float distanceToT = (t.transform.position - transform.position).sqrMagnitude;
+            if(distanceToT == 0) // for performance
+            {
+                if (GetComponent<T>())
+                {
+                    if(t == GetComponent<T>())
+                    {
+                        continue;
+                    }
+                }
+            }
+            if (distanceToT < distanceToClosestT)
+            {
+                distanceToClosestT = distanceToT;
+                closestT = t;
+            }
+        }
+        return closestT.transform;
     }
 }

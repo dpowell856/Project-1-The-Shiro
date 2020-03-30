@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fireplace : MonoBehaviour
 {
     private bool _lit = false;
-    private bool _active;
+    [SerializeField] private bool _active;
 
     private float _timeLeft = 0.5f;
 
@@ -16,21 +16,19 @@ public class Fireplace : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _spriteRenderer = this.GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        Color _blank = new Color(0, 0, 0);
         if (!_active){
-            _spriteRenderer.sprite = sprites[1];
+            _spriteRenderer.color = Color.black;
         } else if (_active && !_lit)
         {
             _spriteRenderer.sprite = sprites[0];
         } else
         {
-            _spriteRenderer.sprite = sprites[2];
-            activatedAnimation();
+            _spriteRenderer.sprite = sprites[1];
         }
     }
 
@@ -71,10 +69,5 @@ public class Fireplace : MonoBehaviour
         _active = activate;
         _lit = false;
         _timeLeft = 0.5f;
-    }
-
-    private void activatedAnimation()
-    {
-
     }
 }

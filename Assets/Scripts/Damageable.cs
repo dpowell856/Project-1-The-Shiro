@@ -4,23 +4,26 @@ using UnityEngine;
 using TMPro;
 
 
-public abstract class Damageable : MonoBehaviour
+public class Damageable : MonoBehaviour
 {
     [SerializeField] protected float _totalHealth;
 
     protected float _health;
 
-    protected TextMeshProUGUI _textMesh; 
+    protected virtual void Awake(){}
 
-    void Start()
+    protected virtual void Start()
     {
-        _textMesh = GetComponentInChildren<TextMeshProUGUI>();
         _health = _totalHealth;
     }
 
     public void TakeDamage(float damage)
     {
         _health -= damage;
+        if(_health <= 0)
+        {
+            Die();
+        }
     }
 
     protected void Die()

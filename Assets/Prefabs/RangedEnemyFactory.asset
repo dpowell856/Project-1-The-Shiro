@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d405fb92b2b4221498208b1c6956fd3e, type: 3}
+  m_Name: RangedEnemyFactory
+  m_EditorClassIdentifier: 
+  _speed: 0.03
+  _speedRandomiserPercentage: 0.4
+  _rangeFromEnemys: 2
+  _rangeFromEnemysRandomiserPercentage: 1
+  _rangeFromPlayer: 7
+  _enemyObject: {fileID: 4933311159306330134, guid: 35d958f4068667544b2e95072d81a6f8,
+    type: 3}

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SpawnZone : MonoBehaviour
 {
     [System.Serializable] public struct SpawnInfo {
-        public GameObject objectToSpawn;
+        public EnemyFactory enemyFactory;
         public float spawnFrequency;
         public float spawnFrequencyRandomnesRange;
     }
@@ -15,19 +15,15 @@ public class SpawnZone : MonoBehaviour
 
     private Dictionary<GameObject, float> _objectSpawnTimeLinks = new Dictionary<GameObject, float>();
 
-    private bool _spawnzoneActive = true;
+    private bool _spawnzoneActive = false;
 
     private Vector2 maxCorner, minCorner;
 
     private void Awake()
     {
         Rect spawnRect = GetComponent<RectTransform>().rect;
-        print("SpawnREctCenter: " + transform.position);
-        print("SpawnRectangleSize: " + spawnRect.size);
         maxCorner = (Vector2)transform.position + spawnRect.size / 2;
-        print("Max corner: " + maxCorner);
         minCorner = (Vector2)transform.position - spawnRect.size / 2;
-        print("Min corner: " + minCorner);
     }
 
     private void Update()
@@ -36,27 +32,27 @@ public class SpawnZone : MonoBehaviour
         {
             foreach (SpawnInfo spawnInfo in spawnInfos)
             {
-                if (_objectSpawnTimeLinks.ContainsKey(spawnInfo.objectToSpawn))
+                if (_objectSpawnTimeLinks.ContainsKey(spawnInfo.enemyFactory.GetGameObject()))
                 {
-                    if(Time.time >= _objectSpawnTimeLinks[spawnInfo.objectToSpawn])
+                    if(Time.time >= _objectSpawnTimeLinks[spawnInfo.enemyFactory.GetGameObject()])
                     {
-                        SpawnObject(spawnInfo.objectToSpawn);
-                        _objectSpawnTimeLinks[spawnInfo.objectToSpawn] = CalculateSpawnTime(spawnInfo.spawnFrequency, spawnInfo.spawnFrequencyRandomnesRange);
+                        SpawnEnemy(spawnInfo.enemyFactory);
+                        _objectSpawnTimeLinks[spawnInfo.enemyFactory.GetGameObject()] = CalculateSpawnTime(spawnInfo.spawnFrequency, spawnInfo.spawnFrequencyRandomnesRange);
                     }
                 }
                 else
                 {
-                    _objectSpawnTimeLinks.Add(spawnInfo.objectToSpawn, CalculateSpawnTime(spawnInfo.spawnFrequency, spawnInfo.spawnFrequencyRandomnesRange));
+                    _objectSpawnTimeLinks.Add(spawnInfo.enemyFactory.GetGameObject(), CalculateSpawnTime(spawnInfo.spawnFrequency, spawnInfo.spawnFrequencyRandomnesRange));
                 }
             }
         }
     }
 
-    private void SpawnObject(GameObject objectToSpawn)
+    private void SpawnEnemy(EnemyFactory enemyFactory)
     {
         Vector3 positionToSpawn = new Vector2(Random.Range(minCorner.x, maxCorner.x), Random.Range(minCorner.y, maxCorner.y));
-        print("Position to spawn: " + positionToSpawn);
-        Instantiate(objectToSpawn, positionToSpawn, Quaternion.identity, null);
+        enemyFactory.Spawn(positionToSpawn);
+        
     }
 
     private float CalculateSpawnTime(float frequency, float randomnesRange)
@@ -64,12 +60,12 @@ public class SpawnZone : MonoBehaviour
         return (frequency + Random.Range(-randomnesRange, randomnesRange)) + Time.time;
     }
 
-    private void SetSpawnzoneActive(bool active)
+    public void SetSpawnzoneActive(bool active)
     {
         _spawnzoneActive = active;
     }
 
-    private bool GetSpawnzoneActive()
+    public bool GetSpawnzoneActive()
     {
         return _spawnzoneActive;
     }

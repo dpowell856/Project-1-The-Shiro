@@ -2,32 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spinner : BulletSpawner
+public class Spinner : ProjectileSpawner
 {
     [SerializeField] private float _spinSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void FixedUpdate()
     {
-        
+        base.FixedUpdate();
+        transform.Rotate(Vector3.forward * _spinSpeed);
     }
-
-    private void FixedUpdate()
-    {
-        base.HandleBulletGeneration();
-        transform.Rotate(Vector3.right, _spinSpeed * Time.fixedDeltaTime);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    /*protected override Matrix4x4 MoveBullet(Matrix4x4 matrix)
-    {
-        Matrix4x4 movedMatrix = matrix;
-        movedMatrix += 
-        return Movedmatrix;
-    }*/
 }

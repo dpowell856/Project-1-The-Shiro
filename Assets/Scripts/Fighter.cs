@@ -13,9 +13,9 @@ public abstract class Fighter : MonoBehaviour
 
     public Player player { get; private set; }
 
-    [SerializeField] private GameObject _bulletPrefab;
+    private Gun _gun;
 
-    private Transform _firePoint;
+    private FighterStatsBar _statsBars;
 
     private Camera _mainCamera;
 
@@ -31,7 +31,8 @@ public abstract class Fighter : MonoBehaviour
 
     private void Awake()
     {
-        _firePoint = transform.GetChild(1); //trash but will work
+        _statsBars = GetComponentInChildren<FighterStatsBar>();
+        _gun = GetComponentInChildren<Gun>();
     }
 
     protected virtual void Start()
@@ -107,20 +108,32 @@ public abstract class Fighter : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        _health -= amount;
-        if (_health <= 0)
-        {
-            Die();
-        }
+        ChangeHealth(-amount);
     }
 
     public void Heal(float amount)
     {
+        ChangeHealth(amount);
+    }
+
+    private void ChangeHealth(float amount)
+    {
         _health += amount;
-        if(_health > _maxHealth)
+        if(_health < 0)
+        {
+            Die();
+        }
+        else if (_health > _maxHealth)
         {
             _health = _maxHealth;
         }
+        _statsBars.SetHealthPorportion(_health / _maxHealth);
+    }
+
+    private void ChangeStamina(float amount)
+    {
+        _stamina += amount;
+        _statsBars.SetStaminaProportion(_stamina / _maxStamina);
     }
 
     private void Die()
@@ -159,7 +172,6 @@ public abstract class Fighter : MonoBehaviour
     {
 
         if ((_stamina + _staminaRegenRate) < _maxStamina)
-
         {
             _stamina += _staminaRegenRate;
         }
@@ -167,6 +179,6 @@ public abstract class Fighter : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = Instantiate(_bulletPrefab, _firePoint.position, transform.rotation);
+        _gun.Shoot();
     }
 }
