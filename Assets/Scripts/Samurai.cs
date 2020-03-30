@@ -18,6 +18,7 @@ public class Samurai : Fighter
 
     protected override void UseAbillity()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
+        this._stamina += 5;
     }
 }

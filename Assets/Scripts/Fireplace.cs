@@ -7,7 +7,7 @@ public class Fireplace : MonoBehaviour
     private bool _lit = false;
     [SerializeField] private bool _active;
 
-    private float _timeLeft = 0.5f;
+    private float _timeLeft = 2.0f;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -68,6 +68,6 @@ public class Fireplace : MonoBehaviour
     {
         _active = activate;
         _lit = false;
-        _timeLeft = 0.5f;
+        _timeLeft = 2.0f;
     }
 }
